@@ -61,6 +61,7 @@
     border-radius: var(--border-radius);
     color: white;
     display: inline-flex;
+    font-weight: var(--font-weight-bold);
     padding: var(--spacing-md);
     text-decoration: none;
     transition: all 0.1s linear;
