@@ -24,7 +24,7 @@
     --color-text: #333333;
     --font-family: 'Roboto Mono', monospace;
     --font-weight: 300;
-    --font-weight-bold: 300;
+    --font-weight-bold: 500;
     --max-width: 48rem;
     --spacing-lg: 2rem;
     --spacing-md: 1rem;
