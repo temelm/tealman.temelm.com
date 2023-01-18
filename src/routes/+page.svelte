@@ -23,7 +23,7 @@
   }
 
   section > img {
-    height: 8rem;
-    width: 8rem;
+    height: 12rem;
+    width: 12rem;
   }
 </style>
