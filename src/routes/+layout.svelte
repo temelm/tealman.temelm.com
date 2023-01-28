@@ -1,24 +1,15 @@
 <script>
-  import imgSrcLogo from '../images/favicon.png'
+  import Nav from './Nav.svelte';
 </script>
 
-<nav>
-  <ul>
-    <li>
-      <a href="/">
-        <img src={imgSrcLogo} alt="Logo">
-        Tealman
-      </a>
-    </li>
-  </ul>
-</nav>
+<Nav></Nav>
 
 <slot></slot>
 
 <style>
   :global(:root) {
     --border-radius: 0.125rem;
-    --color-background: white;
+    --color-background: white; /* @todo: review */
     --color-link-text: #333333;
     --color-link-text-hover: black;
     --color-text: #333333;
@@ -32,7 +23,7 @@
   }
 
   :global(body) {
-    background-color: var(--color-background);
+    background-color: #e8e8e8;
     color: var(--color-text);
     font-family: var(--font-family);
     font-weight: var(--font-weight);
@@ -41,9 +32,11 @@
   }
 
   :global(section) {
-    padding-left: var(--spacing-md);
-    padding-right: var(--spacing-md);
-    margin-top: calc(3 * var(--spacing-lg)); /* 🐒 patch */
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
   }
 
   :global(h1) {
@@ -74,47 +67,6 @@
   :global(.linkbutton img) {
     height: 2rem;
     margin-right: var(--spacing-md);
-    width: 2rem;
-  }
-
-  nav {
-    background-color: #e0e0e0;
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-    max-width: var(--max-width);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
-
-  nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: var(--spacing-md);
-  }
-
-  nav ul li a {
-    color: var(--color-link-text);
-    text-decoration: none;
-    transition: all 0.1s linear;
-  }
-
-  nav ul li a:hover {
-    color: var(--color-link-text-hover);
-    font-size: 1.05rem;
-    text-decoration: underline;
-  }
-
-  nav ul li a:has(img) {
-    align-items: center;
-    display: flex;
-  }
-
-  nav ul li a img {
-    height: 2rem;
-    margin-right: var(--spacing-sm);
     width: 2rem;
   }
 </style>
