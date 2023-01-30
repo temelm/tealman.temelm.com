@@ -2,9 +2,9 @@
   import Nav from './Nav.svelte';
 </script>
 
-<Nav></Nav>
+<Nav />
 
-<slot></slot>
+<slot />
 
 <style>
   :global(:root) {

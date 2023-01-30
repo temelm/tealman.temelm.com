@@ -1,9 +1,8 @@
 <script>
-  
 </script>
 
 <section id="features">
-  <h1>Features</h1> <!-- @todo: review -->
+  <h1>Features</h1>
 </section>
 
 <style>

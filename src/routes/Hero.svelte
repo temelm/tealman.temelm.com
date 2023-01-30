@@ -1,6 +1,9 @@
 <script>
   import imgSrcLogo from '../images/favicon.png';
   import imgSrcChrome from '../images/chrome.svg';
+  const extensionUrl = `
+    https://chrome.google.com/webstore/detail/tealman/kbppiimbnpoalogphgccdikkjhjolmfn
+  `;
 </script>
 
 <section>
@@ -9,14 +12,17 @@
       <h1>Tealman</h1>
     </div>
     <div>
-      <img src={imgSrcLogo} alt="Logo" id="hero-image">
+      <img src={imgSrcLogo} alt="Logo" id="hero-image" />
     </div>
     <div>
-      <p>Extends Chrome DevTools to display data sent to Adobe Analytics, Google Analytics, Tealium Collect and Twitter</p>
+      <p>
+        Extends Chrome DevTools to display data sent to Adobe Analytics, Google Analytics, Tealium
+        Collect and Twitter
+      </p>
     </div>
     <div>
-      <a href="https://chrome.google.com/webstore/detail/tealman/kbppiimbnpoalogphgccdikkjhjolmfn" class="linkbutton">
-        <img src={imgSrcChrome} alt="Chrome">
+      <a href={extensionUrl} class="linkbutton">
+        <img src={imgSrcChrome} alt="Chrome" />
         Add to Chrome
       </a>
     </div>

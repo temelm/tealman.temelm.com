@@ -6,7 +6,7 @@
   <ul>
     <li>
       <a href="#">
-        <img src={imgSrcLogo} alt="Logo">
+        <img src={imgSrcLogo} alt="Logo" />
         Tealman
       </a>
     </li>

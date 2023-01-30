@@ -1,9 +1,9 @@
 <script>
-  const copyrightYear = new Date().getFullYear()
+  const copyrightYear = new Date().getFullYear();
 </script>
 
 <footer>
-  <span role='img' aria-label='Copyright'>©️</span>
+  <span role="img" aria-label="Copyright">©️</span>
   <span>2019-{copyrightYear}</span>
   Mustafa Temel
 </footer>

@@ -4,9 +4,9 @@
   import Footer from './Footer.svelte';
 </script>
 
-<Hero></Hero>
-<Features></Features>
-<Footer></Footer>
+<Hero />
+<Features />
+<Footer />
 
 <style>
 </style>
