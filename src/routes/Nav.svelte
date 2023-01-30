@@ -5,6 +5,7 @@
 <nav>
   <ul>
     <li>
+      <!-- svelte-ignore a11y-invalid-attribute -->
       <a href="#">
         <img src={imgSrcLogo} alt="Logo" />
         Tealman
