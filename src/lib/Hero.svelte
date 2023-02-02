@@ -1,13 +1,11 @@
 <script>
   import imgSrcLogo from '../images/favicon.png';
   import imgSrcChrome from '../images/chrome.svg';
-  const extensionUrl = `
-    https://chrome.google.com/webstore/detail/tealman/kbppiimbnpoalogphgccdikkjhjolmfn
-  `;
+  import Link from '$lib/Link.svelte';
 </script>
 
 <section>
-  <div class="grid">
+  <div>
     <div>
       <h1>Tealman</h1>
     </div>
@@ -21,10 +19,13 @@
       </p>
     </div>
     <div>
-      <a href={extensionUrl} class="linkbutton">
-        <img src={imgSrcChrome} alt="Chrome" />
-        Add to Chrome
-      </a>
+      <Link
+        href="https://chrome.google.com/webstore/detail/tealman/kbppiimbnpoalogphgccdikkjhjolmfn"
+        className="button button-primary"
+        src={imgSrcChrome}
+        alt="Chrome"
+        text="Add to Chrome"
+      />
     </div>
   </div>
 </section>
@@ -32,11 +33,6 @@
 <style>
   section {
     margin-top: calc(3 * var(--spacing-lg)); /* 🐒 patch */
-  }
-
-  .grid {
-    display: grid;
-    row-gap: var(--spacing-lg);
   }
 
   #hero-image {

@@ -1,0 +1,48 @@
+:root {
+  --border-radius: 0.125rem; /* Global */
+  --color-background: white; /* Local to this file */
+  --color-body: #e8e8e8; /* Local to this file */
+  --color-button: lightslategray; /* Local to Link */
+  --color-button-border: slategray; /* Local to Link */
+  --color-button-border-hover: var(--color-primary); /* Local to Link */
+  --color-button-hover: var(--color-primary); /* Local to Link */
+  --color-button-text: white; /* Local to Link */
+  --color-link-text: #333333; /* Local to Link */
+  --color-link-text-hover: black; /* Local to Link */
+  --color-nav: #f8f8f8; /* Local to Nav */
+  --color-primary: teal; /* Global */
+  --color-text: #333333; /* Local to this file */
+  --font-family: 'Roboto Mono', monospace; /* Global */
+  --font-weight: 300; /* Global */
+  --font-weight-bold: 500; /* Global */
+  --max-width: 48rem; /* Global */
+  --spacing-lg: 2rem; /* Global */
+  --spacing-md: 1rem; /* Global */
+  --spacing-sm: 0.5rem; /* Global */
+}
+
+body {
+  background-color: var(--color-body);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+section {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+h1 {
+  font-size: xx-large;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}

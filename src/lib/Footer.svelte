@@ -10,7 +10,7 @@
 
 <style>
   footer {
-    padding-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
     text-align: center;
   }
 </style>
