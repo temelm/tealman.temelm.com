@@ -1,29 +1,24 @@
 :root {
-  --border-radius: 0.125rem; /* Global */
-  --color-background: white; /* Local to this file */
-  --color-body: #e8e8e8; /* Local to this file */
-  --color-button: lightslategray; /* Local to Link */
-  --color-button-border: slategray; /* Local to Link */
-  --color-button-border-hover: var(--color-primary); /* Local to Link */
-  --color-button-hover: var(--color-primary); /* Local to Link */
-  --color-button-text: white; /* Local to Link */
-  --color-link-text: #333333; /* Local to Link */
-  --color-link-text-hover: black; /* Local to Link */
-  --color-nav: #f8f8f8; /* Local to Nav */
-  --color-primary: teal; /* Global */
-  --color-text: #333333; /* Local to this file */
-  --font-family: 'Roboto Mono', monospace; /* Global */
-  --font-weight: 300; /* Global */
-  --font-weight-bold: 500; /* Global */
-  --max-width: 48rem; /* Global */
-  --spacing-lg: 2rem; /* Global */
-  --spacing-md: 1rem; /* Global */
-  --spacing-sm: 0.5rem; /* Global */
+  --border-radius: 0.125rem;
+  --color-primary: teal;
+  --font-family: 'Roboto Mono', monospace;
+  --font-weight: 300;
+  --font-weight-bold: 500;
+  --max-width: 48rem;
+  --spacing-large: 2rem;
+  --spacing-medium: 1rem;
+  --spacing-small: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: var(--color-body);
-  color: var(--color-text);
+  background-color: #e8e8e8;
+  color: #333333;
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   margin: 0 auto;
@@ -31,18 +26,13 @@ body {
 }
 
 section {
-  background-color: var(--color-background);
+  background-color: white;
   border-radius: var(--border-radius);
-  margin-bottom: var(--spacing-lg);
-  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-large);
+  padding: var(--spacing-large);
   text-align: center;
 }
 
 h1 {
   font-size: xx-large;
-  margin: 0;
-}
-
-p {
-  margin: 0;
 }

@@ -3,11 +3,9 @@
   import Link from '$lib/Link.svelte';
 </script>
 
-<nav>
-  <div class="nav-brand">
+<header>
+  <nav>
     <Link src={imgSrcLogo} alt="Logo" text="Tealman" />
-  </div>
-  <div class="nav-links">
     <ul>
       <li>
         <Link href="https://github.com/temelm/tealman" target="_blank" text="GitHub" />
@@ -20,47 +18,39 @@
         />
       </li>
     </ul>
-  </div>
-</nav>
+  </nav>
+</header>
 
 <style>
-  nav {
-    background-color: var(--color-nav);
+  header {
+    background-color: #f8f8f8;
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
-    display: flex;
-    left: 50%;
+    margin-bottom: 32px;
     max-width: var(--max-width);
-    position: fixed;
+    position: sticky;
     top: 0;
-    transform: translateX(-50%);
     width: 100%;
     z-index: 1;
   }
 
-  .nav-brand {
-    display: flex;
-    flex: 1;
-    padding: var(--spacing-md);
-    padding: var(--spacing-sm);
-  }
-
-  .nav-links {
-    flex: 2;
-    padding: var(--spacing-md);
-    padding: var(--spacing-sm);
-  }
-
-  .nav-links ul {
+  header nav {
     align-items: center;
     display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    padding: var(--spacing-medium);
   }
 
-  .nav-links ul li:not(:first-child) {
-    margin-left: var(--spacing-md);
+  header nav ul {
+    list-style: none;
+  }
+
+  header nav ul li {
+    display: inline-block;
+    margin-left: var(--spacing-medium);
+  }
+
+  header nav ul li:first-child {
+    margin-left: 0;
   }
 </style>

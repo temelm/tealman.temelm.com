@@ -17,18 +17,27 @@
 </a>
 
 <style>
+  :root {
+    --color-button: lightslategray;
+    --color-button-border: slategray;
+    --color-button-border-hover: var(--color-primary);
+    --color-button-hover: var(--color-primary);
+    --color-button-text: white;
+    --color-link-text: #333333;
+    --color-link-text-hover: black;
+  }
   a {
     align-items: center;
     color: var(--color-link-text);
     display: inline-flex;
     text-decoration: overline;
     text-decoration-color: transparent;
-    transition: text-decoration-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out;
   }
 
   a:hover {
     color: var(--color-link-text-hover);
-    text-decoration-color: var(--color-primary);
+    text-decoration-color: var(--color-link-text-hover);
   }
 
   a img {
@@ -37,42 +46,34 @@
   }
 
   a:has(img) span {
-    margin-left: var(--spacing-sm);
+    margin-left: var(--spacing-small);
   }
 
   a.button {
     background-color: var(--color-button);
     border: 1px solid var(--color-button-border);
     border-radius: var(--border-radius);
-    padding: var(--spacing-sm);
+    color: var(--color-button-text);
+    padding: var(--spacing-small);
+    text-align: center;
     transition: background-color 0.2s ease-in-out;
   }
 
   a.button:hover {
     background-color: var(--color-button-hover);
+    border-color: var(--color-button-border-hover);
     text-decoration: none;
-    color: white;
   }
 
   a.button.button-primary {
     background-color: var(--color-primary);
     border: none;
-    color: white;
     font-weight: var(--font-weight-bold);
-    padding: var(--spacing-md);
+    padding: var(--spacing-medium);
     transition: transform 0.2s ease-in-out;
   }
 
   a.button.button-primary:hover {
     transform: scale(1.02);
-  }
-
-  a.button.button-primary img {
-    height: 4rem;
-    width: 4rem;
-  }
-
-  a.button.button-primary:has(img) span {
-    margin-left: var(--spacing-md);
   }
 </style>
