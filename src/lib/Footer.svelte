@@ -1,17 +1,43 @@
 <script>
-  import Link from '$lib/Link.svelte';
+  import Link from './Link.svelte';
+  import GitHubIcon from './GitHubIcon.svelte';
+
   const copyrightYear = new Date().getFullYear();
 </script>
 
 <footer>
-  <span role="img" aria-label="Copyright">©️</span>
-  <span>2019-{copyrightYear}</span>
-  <Link href="https://www.temelm.com" text="Mustafa Temel" />
+  <div class="social">
+    <Link href="//github.com/temelm/tealman" rel="external" hasSvgIcon="true">
+      <GitHubIcon />
+    </Link>
+  </div>
+  <div class="copyright">
+    <span role="img" aria-label="Copyright">©️</span>
+    <span>
+      {copyrightYear}
+      <Link href="//www.temelm.com" text="Mustafa Temel" />
+    </span>
+  </div>
 </footer>
 
 <style>
   footer {
-    margin-bottom: var(--spacing-large);
+    font-size: 0.75rem;
+    opacity: 0.75;
+    padding: var(--spacing-lg);
     text-align: center;
+  }
+
+  .social {
+    column-gap: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    footer {
+      opacity: 0.5;
+    }
   }
 </style>

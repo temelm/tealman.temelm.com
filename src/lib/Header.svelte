@@ -1,21 +1,24 @@
 <script>
-  import imgSrcLogo from '../images/favicon.png';
-  import Link from '$lib/Link.svelte';
+  import imgSrcLogo from '../assets/favicon.png';
+  
+  import Link from './Link.svelte';
+  import ChromeIcon from './ChromeIcon.svelte';
 </script>
 
 <header>
   <nav>
-    <Link src={imgSrcLogo} alt="Logo" text="Tealman" />
+    <Link src={imgSrcLogo} alt="Tealman" />
     <ul>
       <li>
-        <Link href="https://github.com/temelm/tealman" target="_blank" text="GitHub" />
-      </li>
-      <li>
         <Link
-          href="https://chrome.google.com/webstore/detail/tealman/kbppiimbnpoalogphgccdikkjhjolmfn"
+          href="//chrome.google.com/webstore/detail/tealman/kbppiimbnpoalogphgccdikkjhjolmfn"
+          rel="external"
           className="button"
+          hasSvgIcon="true"
           text="Add to Chrome"
-        />
+        >
+          <ChromeIcon width="1.25rem" />
+        </Link>
       </li>
     </ul>
   </nav>
@@ -23,11 +26,9 @@
 
 <style>
   header {
-    background-color: #f8f8f8;
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-    margin-bottom: 32px;
-    max-width: var(--max-width);
+    --header-color: rgb(245, 245, 245, 0.95);
+    
+    background-color: var(--header-color);
     position: sticky;
     top: 0;
     width: 100%;
@@ -38,7 +39,9 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: var(--spacing-medium);
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: var(--spacing-md);
   }
 
   header nav ul {
@@ -47,10 +50,16 @@
 
   header nav ul li {
     display: inline-block;
-    margin-left: var(--spacing-medium);
+    margin-left: var(--spacing-sm);
   }
-
+  
   header nav ul li:first-child {
     margin-left: 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    header {
+      --header-color: rgb(64, 64, 64, 0.95);
+    }
   }
 </style>

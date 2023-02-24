@@ -1,15 +1,15 @@
 <script>
-  import imgSrcLogo from '../images/favicon.png';
-  import imgSrcChrome from '../images/chrome.svg';
-  import Link from '$lib/Link.svelte';
+  import imgSrcLogo from '../assets/favicon.png';
+  import Link from './Link.svelte';
+  import ChromeIcon from './ChromeIcon.svelte';
 </script>
 
 <section>
   <div>
     <h1>Tealman</h1>
   </div>
-  <div>
-    <img src={imgSrcLogo} alt="Logo" id="hero-image" />
+  <div class="hero-image">
+    <img src={imgSrcLogo} alt="Logo" />
   </div>
   <div>
     <p>
@@ -19,22 +19,38 @@
   </div>
   <div>
     <Link
-      href="https://chrome.google.com/webstore/detail/tealman/kbppiimbnpoalogphgccdikkjhjolmfn"
-      className="button button-primary"
-      src={imgSrcChrome}
-      alt="Chrome"
+      href="//chrome.google.com/webstore/detail/tealman/kbppiimbnpoalogphgccdikkjhjolmfn"
+      rel="external"
+      className="button"
+      hasSvgIcon="true"
       text="Add to Chrome"
-    />
+    >
+      <ChromeIcon width="1.25rem" />
+    </Link>
   </div>
 </section>
 
 <style>
   section {
     display: grid;
-    row-gap: var(--spacing-large);
+    row-gap: 2rem;
   }
-  #hero-image {
-    height: 12rem;
-    width: 12rem;
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .hero-image {
+    display: grid;
+    place-items: center;
+  }
+
+  img {
+    max-width: 256px;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.25;
   }
 </style>
